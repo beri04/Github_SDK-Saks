@@ -16,7 +16,7 @@ class GitHub:
             "owner":data.get('owner',{}).get("login"),
             'description':data.get('description'),
             'stars':data.get('stargazers_count'),
-            'license':data.get('license',{}).get('name') if data.get(license) else "No licenses is found",
+            'license':data.get('license',{}).get('name') if data.get('license') else "No licenses is found",
             'forks':data.get('forks_count'),
             'open_issues':data.get('open_issues_count')
         }
@@ -33,7 +33,7 @@ class GitHub:
                     'id':issue.get('number'),
                     'title':issue.get('title'),
                     'state':issue.get('state'),
-                    'user':issue.get('author',{}).get("login")
+                    'author':issue.get('user',{}).get("login")
                 }
             )
         return issues
@@ -47,7 +47,7 @@ class GitHub:
         data = response.json()
 
         return {
-            'id':data.get('name'),
+            'id':data.get('number'),
             'title':data.get('title'),
             'state':data.get('state'),
             'author':data.get('user',{}).get('login'),
