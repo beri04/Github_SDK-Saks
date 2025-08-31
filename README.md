@@ -1,4 +1,6 @@
-# 🗳️ GITHUB SDK
+# 🗳️ GITHUB SDK 
+
+[![Run tests](https://github.com/beri04/Github_SDK-Saks/actions/workflows/test.yml/badge.svg)](https://github.com/beri04/Github_SDK-Saks/actions/workflows/test.yml)
 
 This SDK file has been created to :-
 - get the **details** of repo.
@@ -24,4 +26,4 @@ print(sdk.get_repo("octocat","Hello-world"))
 print(sdk.list_issues("octocat","Hello-world"))
 
 #To print the details of issue
-print(sdk.get_issues("octocat","Hello-world"))
+print(sdk.get_issues("octocat","Hello-world",1347))
